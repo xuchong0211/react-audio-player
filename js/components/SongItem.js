@@ -1,7 +1,6 @@
-var React = require('react/addons');
-var classnames = require("classnames");
-var MenuItem = require("react-bootstrap/MenuItem");
-var Glyphicon = require('react-bootstrap/Glyphicon');
+import React from 'react';
+import {MenuItem, Glyphicon} from 'react-bootstrap';
+import classnames from 'classnames';
 
 module.exports = React.createClass({
 	render: function() {

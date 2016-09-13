@@ -1,7 +1,6 @@
-require("./../sass/app.scss");
-
-var React = require('react/addons');
-var AudioPlayer = require("./components/AudioPlayer");
+import React from 'react';
+import '../sass/audioPlayer.scss';
+import AudioPlayer from './components/AudioPlayer';
 
 var songs = [
 	{

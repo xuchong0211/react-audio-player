@@ -1,5 +1,5 @@
-var React = require('react/addons');
-var TimeFormatterMixin = require('./../mixins/TimeFormatterMixin');
+import React from 'react';
+import TimeFormatterMixin from '../mixins/TimeFormatterMixin';
 module.exports = React.createClass({
 
 	mixins: [ TimeFormatterMixin ],
@@ -17,7 +17,7 @@ module.exports = React.createClass({
 		var seek = this.secondsToTime(this.props.seek);
 		var duration = this.secondsToTime(this.props.duration);
 		return (
-			<span className={classes}>{seek} / {duration}</span>
+			<span className={classes} >{seek} / {duration}</span>
 		);
 	}
 

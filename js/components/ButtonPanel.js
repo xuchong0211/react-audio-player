@@ -1,7 +1,5 @@
-var React = require('react/addons');
-var Button = require('react-bootstrap/Button');
-var Glyphicon = require('react-bootstrap/Glyphicon');
-var ButtonGroup = require('react-bootstrap/ButtonGroup');
+import React from 'react';
+import {Button, ButtonGroup, Glyphicon} from 'react-bootstrap';
 
 module.exports = React.createClass({
 
@@ -20,11 +18,11 @@ module.exports = React.createClass({
 		var isShowPlayBtn = !isPlaying || isPause;
 		var buttonClickHandler = isShowPlayBtn ? this.props.onPlayBtnClick : this.props.onPauseBtnClick;
 		var iconName;
-		var iconClasses = "";
+		var iconClasses = "control-icons";
 
 		if (isLoading) {
 			iconName = "refresh";
-			iconClasses = "audio-refresh-animate";
+			iconClasses += " audio-refresh-animate ";
 		} else {
 			iconName = isShowPlayBtn ? "play" : "pause";
 		}
@@ -35,7 +33,7 @@ module.exports = React.createClass({
 		if (this.props.songCount < 2) {
 			return (
 				<ButtonGroup className={buttonPanelClasses}>
-					<Button bsSize="small" onClick={buttonClickHandler}>
+					<Button className="toggleButton" bsSize="small" onClick={buttonClickHandler}>
 						<Glyphicon className={iconClasses} glyph={iconName} />
 					</Button>
 				</ButtonGroup>

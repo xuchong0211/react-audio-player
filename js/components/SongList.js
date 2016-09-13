@@ -1,7 +1,7 @@
-var React = require('react/addons');
-var DropDownButton = require("react-bootstrap/DropDownButton");
-var SongItem = require("./SongItem");
-var SongFormatterMixin = require("./../mixins/SongFormatterMixin");
+import React from 'react';
+import {DropDownButton} from 'react-bootstrap';
+import SongItem from './SongItem';
+import SongFormatterMixin from '../mixins/SongFormatterMixin';
 
 module.exports = React.createClass({
 

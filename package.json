@@ -1,24 +1,26 @@
 {
-  "name": "react-simple-audio-player",
-  "version": "0.0.1",
+  "name": "react-bootstrap-audio-player",
+  "version": "0.1.0",
   "description": "audio player build by react",
-  "main": "app.js",
+  "main": "index.js",
   "devDependencies": {
-    "webpack": "^1.4.13",
-    "webpack-dev-server": "^1.6.5",
-    "css-loader": "^0.7.1",
-    "style-loader": "^0.8.2",
-    "url-loader": "^0.5.5",
-    "file-loader": "^0.7.2",
-    "sass-loader": "^0.3.0",
+    "css-loader": "^0.23.0",
+    "style-loader": "^0.13.0",
+    "howler": "^2.0.0",
+    "file-loader": "^0.8.5",
+    "sass-loader": "^4.0.2",
+    "node-sass": "^3.9.3",
     "jsx-loader": "^0.12.1",
-    "react-hot-loader": "^0.5.0",
-    "html-webpack-plugin": "^1.1.0"
+    "react-hot-loader": "^1.3.0",
+    "html-webpack-plugin": "^1.1.0",
+    "url-loader": "0.5.7",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "react": "^0.13.2",
-    "react-bootstrap": "^0.13.0",
-    "classnames": "^1.1.4"
+    "react": "^0.14.7",
+    "react-bootstrap": "^0.28.2",
+    "classnames": "^2.2.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,6 +32,6 @@
     "audio",
     "player"
   ],
-  "author": "Luc Humanhighway",
-  "license": "ISC"
+  "author": "Xuchong",
+  "license": "MIT"
 }

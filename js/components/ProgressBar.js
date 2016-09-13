@@ -1,11 +1,11 @@
-var React = require('react/addons');
-var ProgressBar = require('react-bootstrap/ProgressBar');
-var classnames = require("classnames");
+import React from 'react';
+import {ProgressBar} from 'react-bootstrap';
+import classnames from 'classnames';
 
 module.exports = React.createClass({
 
 	getDefaultProps: function() {
-		return { progressStyle : { marginLeft: '5px' } };
+		return { progressStyle : { marginLeft: '10px' } };
 	},
 
 	render: function() {
@@ -19,7 +19,9 @@ module.exports = React.createClass({
 
 		return (
 			<div ref="progressBar" className={classes} style={this.props.progressStyle} onClick={this.seekTo}>
-				<div className="audio-progress" style={style}></div>
+				<div className="audio-progress" style={style}>
+					<div className="audio-progress-indicator"></div>
+				</div>
 			</div>
 		);
 	},

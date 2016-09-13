@@ -1,14 +1,12 @@
-var React = require('react/addons');
-var ButtonPanel = require("./ButtonPanel");
-var ProgressBar = require("./ProgressBar");
-var VolumeBar = require("./VolumeBar");
-var TimeLabel = require("./TimeLabel");
-var NameLabel = require("./NameLabel");
-var SongList = require("./SongList");
-
-var SongFormatterMixin = require("./../mixins/SongFormatterMixin");
-
-var Howl = require('howler').Howl;
+import React from 'react';
+import ButtonPanel from './ButtonPanel';
+import ProgressBar from './ProgressBar';
+import VolumeBar from './VolumeBar';
+import TimeLabel from './TimeLabel';
+import NameLabel from './NameLabel';
+import SongList from './SongList';
+import SongFormatterMixin from '../mixins/SongFormatterMixin';
+import {Howl} from 'howler';
 
 module.exports = React.createClass({
 
@@ -77,10 +75,10 @@ module.exports = React.createClass({
 		var songName;
 		if (this.songCount() > 1) {
 			topComponents.push(
-				<SongList ref="songList" className="pull-left" 
+				<SongList ref="songList" className="pull-left"
 						songs={this.state.songs}
-						currentSongIndex={this.state.currentSongIndex} 
-						isPlaying={this.state.isPlaying} isPause={this.state.isPause} 
+						currentSongIndex={this.state.currentSongIndex}
+						isPlaying={this.state.isPlaying} isPause={this.state.isPause}
 						onSongItemClick={this.onSongItemClick}/>
 			);
 			songName = (this.state.currentSongIndex + 1) + ". " + this.getCurrentSongName();
@@ -90,7 +88,7 @@ module.exports = React.createClass({
 
 		return (
 			<div className="audio-player">		
-				<div className="clearfix">
+				<div className="audio-controller-container clearfix">
 					{ topComponents }
 				</div>
 				

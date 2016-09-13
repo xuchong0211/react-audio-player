@@ -7,9 +7,6 @@ webpackConfig = module.exports = {
   entry: ['./js/app', 'webpack/hot/dev-server'],
   // devtool: 'source-map',
   resolve: {
-    alias: {
-      "howler": "./../vendor/howler.min.js"
-    },
     modulesDirectories: [ 'node_modules' ]
   },
   output: {

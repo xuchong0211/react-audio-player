@@ -1,31 +1,62 @@
-$common-padding: 5px;
+$common-padding: 10px;
 $animate-sec: 1.5s;
 
+$icon-color: #EFEFEF;
+$volume-bar-background: #D0D0D0;
+$process-bar-background: #B5B2B2;
+$audio-progress-container-border: #575757;
+$audio-progress-indicator: #F3F3F3;
+
 .audio-player {
-	max-width: 324px;
-	background: #eeeeee;
+	//max-width: 324px;
+	//background: #eeeeee;
+	margin-top: 10px;
+	background: #434343;
 	vertical-align: middle;
 	padding: $common-padding;
+	border-radius: 7px;
 }
 
 .audio-button-panel {
 	padding-top: 2px;
+	.toggleButton {
+		background: transparent;
+		border: none;
+		padding: 0;
+		margin-left: 5px;
+	}
+	.btn:focus {
+		background-color: transparent;
+		outline: none;
+	}
+	.btn:hover {
+		background: transparent;
+	}
 }
 
 .audio-refresh-animate {
-  -webkit-animation: rotating $animate-sec linear infinite;
-  -moz-animation: rotating $animate-sec linear infinite;
-  -ms-animation: rotating $animate-sec linear infinite;
-  -o-animation: rotating $animate-sec linear infinite;
-  animation: rotating $animate-sec linear infinite;
+	-webkit-animation: rotating $animate-sec linear infinite;
+	-moz-animation: rotating $animate-sec linear infinite;
+	-ms-animation: rotating $animate-sec linear infinite;
+	-o-animation: rotating $animate-sec linear infinite;
+	animation: rotating $animate-sec linear infinite;
+}
+
+.control-icons {
+	color: $icon-color;
+	font-size: 20px;
+	margin: 0 5px;
 }
 
 .audio-progress-container {
 	float: left;
-	height: 34px;
-  border-right: 1px solid #aaaaaa;
-  border-left: 1px solid #aaaaaa;
-	width: 235px;
+	height: 10px;
+	border: 0.4px solid $audio-progress-container-border;
+	width: 77%;
+	border-radius: 50px;
+	margin-top: 10px;
+	background-color: #000;
+	cursor: pointer;
 }
 
 .audio-progress-container-short-width {
@@ -33,9 +64,20 @@ $animate-sec: 1.5s;
 }
 
 .audio-progress {
-	background: #666666;
+	position: relative;
+	background: $process-bar-background;
+	border-radius: 50px;
 	width: 100%;
 	height: 100%;
+	.audio-progress-indicator {
+		position: absolute;
+		height: 12px;
+		width: 20px;
+		background-color: $audio-progress-indicator;
+		right: -13px;
+		top: -2px;
+		border-radius: 80px;
+	}
 }
 
 .audio-songs-list {
@@ -59,15 +101,25 @@ $animate-sec: 1.5s;
 	padding-left: $common-padding;
 	padding-top: 2px;
 
+	.toggleButton {
+		background: transparent;
+		border: none;
+		padding: 0;
+	}
+
 	.btn:focus {
-		background-color: #fff;
+		background-color: transparent;
 		outline: none;
+	}
+	.btn:hover {
+		background: transparent;
 	}
 
 	.audio-volume-bar {
 		position: absolute;
 		z-index: 1001;
-		background: #ddd;
+		background: $volume-bar-background;
+		border-radius: 3px;
 	}
 
 	.audio-volume-bar-hide {
@@ -75,8 +127,8 @@ $animate-sec: 1.5s;
 	}
 
 	.audio-volume-percent-container {
-  	border-top: 1px solid #aaa;
-  	border-bottom: 1px solid #aaa;
+		border-top: 1px solid #aaa;
+		border-bottom: 1px solid #aaa;
 		width: 34px;
 		height: 100px;
 		position: relative;
@@ -98,7 +150,7 @@ $animate-sec: 1.5s;
 		bottom: 0;
 		top: 50%;
 		background: #666;
-    position: absolute;
+    	position: absolute;
 	}
 
 }
@@ -111,6 +163,7 @@ $animate-sec: 1.5s;
 
 .audio-time {
 	margin-left: $common-padding;
+	color: #fff;
 }
 
 .audio-name-label {
@@ -120,6 +173,7 @@ $animate-sec: 1.5s;
 	text-overflow: ellipsis;
 	-o-text-overflow: ellipsis;
 	overflow: hidden;
+	color: #fff;
 }
 
 @keyframes rotating {
